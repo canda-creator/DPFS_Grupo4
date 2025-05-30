@@ -16,13 +16,11 @@ Este e-commerce está pensado especialmente para adolescentes y adultos jóvenes
 
 Listado de 5 referentes clave en el ámbito de los accesorios que me inspiran o sirven de guía.
 
-1. **Dreamie** - Tienda que mezcla moda y accesorios kawaii con un estilo moderno y fresco, popular por su variedad de productos únicos y creativos. https://dreamie.fi/
-2. **KoreKawaii** - Referente en la difusión de la moda y cultura kawaii coreana, con una selección cuidada de accesorios y ropa que capturan la esencia del estilo cute asiático. https://korekawaii.com/
-3. **Tienda Macabra** - Tienda online Argentina que destaca por su estilo alternativo y oscuro, combinando elementos kawaii con estética gótica y macabra, ideal para quienes buscan accesorios únicos. https://www.tiendamacabra.com/
-4. **Todo Moda** - Marca popular en Latinoamérica que ofrece accesorios y moda con tendencias variadas, incluyendo piezas con toques kawaii y modernos que atraen a jóvenes.
-   https://ar.todomoda.com/
-5. **The Kawaii Shoppu** - Tienda especializada en productos kawaii auténticos, con una amplia gama de accesorios, papelería y gadgets que reflejan la cultura japonesa y coreana.
-   https://thekawaiishoppu.com/
+1. **[Dreamie](https://dreamie.fi/)** - Tienda que mezcla moda y accesorios kawaii con un estilo moderno y fresco, popular por su variedad de productos únicos y creativos.
+2. **[KoreKawaii](https://korekawaii.com/)** - Referente en la difusión de la moda y cultura kawaii coreana, con una selección cuidada de accesorios y ropa que capturan la esencia del estilo cute asiático.
+3. **[Tienda Macabra](https://www.tiendamacabra.com/)** - Tienda online Argentina que destaca por su estilo alternativo y oscuro, combinando elementos kawaii con estética gótica y macabra, ideal para quienes buscan accesorios únicos.
+4. **[Todo Moda](https://ar.todomoda.com/)** - Marca popular en Latinoamérica que ofrece accesorios y moda con tendencias variadas, incluyendo piezas con toques kawaii y modernos que atraen a jóvenes.
+5. **[The Kawaii Shoppu](https://thekawaiishoppu.com/)** - Tienda especializada en productos kawaii auténticos, con una amplia gama de accesorios, papelería y gadgets que reflejan la cultura japonesa y coreana.
 
 ## 🎯 Visión y Objetivos: Enfocado en diseño y estilo
 
@@ -38,3 +36,22 @@ Listado de 5 referentes clave en el ámbito de los accesorios que me inspiran o 
 3. Vender por Instagram, ferias y una tienda online. Implementar promociones, sorteos y una estrategia de fidelización.
 
 4. Escalar según lo que más guste, mejorar packaging y sumar más puntos de venta.
+
+# 🎨 Paleta de Colores – “Pastel Dream”
+
+Una paleta suave y moderna para el diseño visual, ideal para transmitir una estética delicada, fresca y con estilo propio.
+
+| Elemento          | Color             | Código Hex |
+| ----------------- | ----------------- | ---------- |
+| Fondo             | Blanco puro       | `#FFFFFF`  |
+| Acento principal  | Rosa pastel suave | `#F7C7DB`  |
+| Acento secundario | Lila claro pastel | `#DCD6F7`  |
+| Texto / Detalles  | Negro puro        | `#000000`  |
+
+## 🎨 Fuente
+
+Fuente elegida:
+
+- Primaria: **[Poppins](https://fonts.google.com/specimen/Poppins)** – moderna, redondeada y femenina
+
+- Alternativa: **[Quicksand](https://fonts.google.com/specimen/Quicksand)** – suave, liviana y amigable
