@@ -43,9 +43,9 @@ Una paleta suave y moderna para el diseño visual, ideal para transmitir una est
 
 | Elemento          | Color             | Código Hex |
 | ----------------- | ----------------- | ---------- |
-| Fondo             | Blanco puro       | `#FFFFFF`  |
-| Acento principal  | Rosa pastel suave | `#fEE9EE`  |
-| Acento secundario | Rosa para hover   | `#FFC3DA`  |
+| Fondo             | Blanco puro       | `#ffffff`  |
+| Acento principal  | Rosa pastel suave | `#ffdbec`  |
+| Acento secundario | Rosa para hover   | `#ffc3da`  |
 | Texto / Detalles  | Negro puro        | `#000000`  |
 
 ## 🎨 Fuente
