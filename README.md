@@ -10,13 +10,13 @@ Este e-commerce está pensado especialmente para adolescentes y adultos jóvenes
 - **Collar de corazones** - Un collar delicado pero con personalidad, compuesto por corazones metálicos enlazados. El diseño es delicado, minimalista y romántico, ideal para quienes buscan un accesorio versátil que combine dulzura con un toque moderno.
 - **Phone Strap** - Phone Strap con cuentas negras, blancas y perladas, decorado con una luna metálica y dijes de corazones. Ideal para darle un toque personal, con un mix de dulzura y misterio.
 - **Aros Hello Kitty** - Aros colgantes de Hello Kitty con corazones perlados. Estilo tierno pero con una estética marcada, ideales para complementar looks alternativos con un toque nostálgico.
-- **Producto/Servicio 5** - Breve descripción.
+- **Aros de estrellas** - Aros colgantes con 3 estrellas. Ideal para looks alternativos.
 
 ## 🔝 Referentes del Sector
 
 Listado de 5 referentes clave en el ámbito de los accesorios que me inspiran o sirven de guía.
 
-1. **[Dreamie](https://dreamie.fi/)** - Tienda que mezcla moda y accesorios kawaii con un estilo moderno y fresco, popular por su variedad de productos únicos y creativos.
+1. **[TofuCute](https://www.tofucute.com/)** - Tienda originaria de Reino Unido que mezcla moda, accesorios kawaii e incluso comida basado todo en Japón con un estilo muy tierno, popular por su variedad de productos únicos y creativos.
 2. **[KoreKawaii](https://korekawaii.com/)** - Referente en la difusión de la moda y cultura kawaii coreana, con una selección cuidada de accesorios y ropa que capturan la esencia del estilo cute asiático.
 3. **[Tienda Macabra](https://www.tiendamacabra.com/)** - Tienda online Argentina que destaca por su estilo alternativo y oscuro, combinando elementos kawaii con estética gótica y macabra, ideal para quienes buscan accesorios únicos.
 4. **[Todo Moda](https://ar.todomoda.com/)** - Marca popular en Latinoamérica que ofrece accesorios y moda con tendencias variadas, incluyendo piezas con toques kawaii y modernos que atraen a jóvenes.
@@ -44,8 +44,8 @@ Una paleta suave y moderna para el diseño visual, ideal para transmitir una est
 | Elemento          | Color             | Código Hex |
 | ----------------- | ----------------- | ---------- |
 | Fondo             | Blanco puro       | `#FFFFFF`  |
-| Acento principal  | Rosa pastel suave | `#F7C7DB`  |
-| Acento secundario | Lila claro pastel | `#DCD6F7`  |
+| Acento principal  | Rosa pastel suave | `#fEE9EE`  |
+| Acento secundario | Rosa para hover   | `#FFC3DA`  |
 | Texto / Detalles  | Negro puro        | `#000000`  |
 
 ## 🎨 Fuente
