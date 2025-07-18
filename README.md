@@ -1,5 +1,10 @@
 # DPFS_Candela_Abalos_Alfonso
 
+## 📋 Tablero de Trabajo
+
+**Seguimiento de tareas y progreso del proyecto:**  
+🔗 [Tablero Trello](https://trello.com/invite/b/68365e68dafacd3e7d5cadbb/ATTIec3201df95f4d6cec2ae46e0bb7a0019430A1FAD/proyecto-canda)
+
 ## 🌍 Público Destinado
 
 Este e-commerce está pensado especialmente para adolescentes y adultos jóvenes que disfrutan de jugar con su estilo. Amantes de los accesorios que combinan lo delicado con lo misterioso, lo pastel con lo gótico. Personas que se expresan a través de los contrastes y buscan piezas con mucha personalidad.
@@ -57,5 +62,3 @@ Fuente elegida:
 - Alternativa: **[Quicksand](https://fonts.google.com/specimen/Quicksand)** – suave, liviana y amigable
 
 
-**Link al Trello del proyecto:**  
-🔗 [Acceder al tablero](https://trello.com/invite/b/68365e68dafacd3e7d5cadbb/ATTIec3201df95f4d6cec2ae46e0bb7a0019430A1FAD/proyecto-canda)
