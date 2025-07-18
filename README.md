@@ -55,3 +55,7 @@ Fuente elegida:
 - Primaria: **[Poppins](https://fonts.google.com/specimen/Poppins)** – moderna, redondeada y femenina
 
 - Alternativa: **[Quicksand](https://fonts.google.com/specimen/Quicksand)** – suave, liviana y amigable
+
+
+**Link al Trello del proyecto:**  
+🔗 [Acceder al tablero](https://trello.com/invite/b/68365e68dafacd3e7d5cadbb/ATTIec3201df95f4d6cec2ae46e0bb7a0019430A1FAD/proyecto-canda)
