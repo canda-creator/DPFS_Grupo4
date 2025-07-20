@@ -5,6 +5,10 @@
 **Seguimiento de tareas y progreso del proyecto:**  
 🔗 [Tablero Trello](https://trello.com/invite/b/68365e68dafacd3e7d5cadbb/ATTIec3201df95f4d6cec2ae46e0bb7a0019430A1FAD/proyecto-canda)
 
+## dreamie - Presentación del proyecto
+![Logo de Dreamie](proyecto-digitar/media/logo.png)
+
+
 ## 🌍 Público Destinado
 
 Este e-commerce está pensado especialmente para adolescentes y adultos jóvenes que disfrutan de jugar con su estilo. Amantes de los accesorios que combinan lo delicado con lo misterioso, lo pastel con lo gótico. Personas que se expresan a través de los contrastes y buscan piezas con mucha personalidad.
@@ -60,5 +64,3 @@ Fuente elegida:
 - Primaria: **[Poppins](https://fonts.google.com/specimen/Poppins)** – moderna, redondeada y femenina
 
 - Alternativa: **[Quicksand](https://fonts.google.com/specimen/Quicksand)** – suave, liviana y amigable
-
-

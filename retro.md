@@ -1,21 +1,19 @@
 # Retrospectiva Sprint 1  
 
-## Comenzar a hacer  
-- Punto 1  
-- Punto 2  
-
-## Hacer más  
-- Punto 1  
-- Punto 2  
+## En lo que nos fue bien 
+- Al profesor le gustó la idea y la organización de los wireframes.
 
 ## Continuar haciendo  
-- Punto 1  
-- Punto 2  
+- Sé que no es obligatorio pero me gustaría hacer un prototipo en Figma de la página
+- Pasar los wireframes, paleta de colores y la tipografía a código html y css
 
-## Hacer menos  
-- Punto 1  
-- Punto 2  
+## Hacer más  
+- Ir modificando el estilo de la página como por ejemplo la paleta de colores
+- Punto 2 
 
-## Dejar de hacer  
-- Punto 1  
+## Cosas para mejorar
+- Nos olvidamos de poner el título del proyecto y el logo. 
+
+## No hacer más
+- Punto 1    
 - Punto 2  
