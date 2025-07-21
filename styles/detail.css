@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.imagenes {
+  padding: 50px;
+}
+
+.detalles-producto {
+  padding: 50px;
+}
+
+.cantidad {
+  display: flex;
+  align-items: center;
+}
+.cantidad button {
+  width: 30px;
+  height: 30px;
+}
+.cantidad input {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
