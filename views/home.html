@@ -24,7 +24,9 @@
   </head>
   <body>
     <header>
-      <a href="./home.html"><img src="../media/logo.png" alt="logo-dreamie" /></a>
+      <a href="./home.html"
+        ><img src="../media/logo.png" alt="logo-dreamie"
+      /></a>
       <nav>
         <ul>
           <li><a href="./home.html">Inicio</a></li>
@@ -154,23 +156,122 @@
     <!-- CARRITO - El css y js estan aca temporalmente 
  para que sea modular, para copiar y pegar mas facil
  en todas las paginas (con React ya no va a hacer falta)-->
-    <div
-      class="cart-sidebar"
-      style="
-        display: none;
+    <style>
+      .cart-sidebar {
         position: fixed;
         top: 0;
         right: 0;
         width: 300px;
         height: 100%;
-        background: white;
-        z-index: 1000;
+        background: pink;
+        z-index: 1;
         padding: 20px;
-        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-      "
-    >
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .cart-sidebar h2 {
+        margin-top: 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        color: #333;
+      }
+
+      .cart-sidebar button.close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: #333;
+      }
+
+      .cart-item {
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .item-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      .item-price {
+        color: #333;
+        font-weight: bold;
+      }
+
+      .item-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      .delete-item {
+        background: none;
+        border: none;
+        color: #570a4a;
+        padding: 0;
+        font-size: 14px;
+      }
+
+      .cantidad-control {
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 20px;
+        padding: 3px 10px;
+      }
+
+      .cantidad-btn {
+        background: none;
+        border: none;
+        font-size: 16px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #333;
+      }
+
+      .cantidad {
+        margin: 0 8px;
+        font-weight: bold;
+      }
+
+      .cart-total {
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        margin: 20px 0;
+        padding-top: 20px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        color: #333;
+      }
+
+      .checkout-btn {
+        width: 100%;
+        padding: 12px;
+        background-color: #ff70b4;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .checkout-btn:hover {
+        background-color: #ff1590;
+      }
+    </style>
+    <div class="cart-sidebar" style="display: none;">
       <h2>Carrito de compras</h2>
-      <button onclick="toggleCart()">×</button>
+      <button class="close-btn" onclick="toggleCart()">×</button>
+
       <!-- Items del carrito -->
       <div class="cart-item">
         <div class="item-info">
@@ -216,8 +317,9 @@
           </div>
         </div>
       </div>
+
       <div class="cart-total">Total: $30.000</div>
-      <button class="comprar-btn">Iniciar Compra</button>
+      <button class="checkout-btn">Iniciar Compra</button>
     </div>
     <script>
       function toggleCart() {
@@ -225,6 +327,7 @@
         cart.style.display = cart.style.display === "none" ? "block" : "none";
       }
     </script>
+    <!-- FIN DEL CARRITO -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
