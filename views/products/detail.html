@@ -10,7 +10,7 @@
     />
     <!-- Styles -->
     <link rel="stylesheet" href="../../styles/general.css" />
-    <link rel="stylesheet" href="../../styles/detail.css"/>
+    <link rel="stylesheet" href="../../styles/detail.css" />
     <!-- Favicon-->
     <link rel="shortcut icon" href="../media/logo.png" type="image/x-icon" />
     <!-- Icons Font Awesome v6.7.2 -->
@@ -67,32 +67,39 @@
         <i class="fa-solid fa-bars"></i>
       </div>
     </header>
-    <main>
-      <div class="container">
-        <div class="imagenes">
-          <!-- carrousel in mobile-->
-          <img src="https://example.com/image1.jpg" alt="Imagen 1" />
-          <img src="https://example.com/image2.jpg" alt="Imagen 2" />
-          <img src="https://example.com/image3.jpg" alt="Imagen 3" />
-          <img src="https://example.com/image3.jpg" alt="Imagen 3" />
+    <main class="product-detail">
+      <div class="product-container">
+        <div class="product-images">
+          <img
+            src="../../media/productos/default.jpg"
+            alt="Nombre del producto"
+          />
         </div>
-        <div class="detalles-producto">
-          <h2>Nombre del Producto</h2>
-          <h3>$10.000</h3>
 
-          <div class="cantidad">
-            <button class="menos">-</button>
-            <input type="number" value="1" min="1" />
-            <button class="mas">+</button>
+        <div class="product-info">
+          <h1>Nombre del producto</h1>
+          <p class="price">$10.000</p>
+
+          <div class="cantidad-selector">
+            <button class="cantidad-btn">-</button>
+            <span class="cantidad">0</span>
+            <button class="cantidad-btn">+</button>
           </div>
-          <button>Agregar al carrito</button>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad beatae
-            numquam dolore magni vitae reprehenderit ullam voluptate odit
-            repellendus nulla tempore officiis dicta excepturi dignissimos
-            ipsam, cum fuga! Ut, repellat.
-          </p>
+          <button class="add-to-cart">Agregar al carrito</button>
+
+          <div class="product-description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit
+              sollicitudin id, dui facilis suspendisse curaditur lectus ut
+              laoreet semen gravida aptent, sociis dis quis eu eleifend taciti
+              cubilia nullam.
+            </p>
+            <p>
+              Mi nisi tellus turpis elementum parturient purus at fringilla
+              facilisis vestibulum egestas risus potenti euismod laculis.
+            </p>
+          </div>
         </div>
       </div>
     </main>
