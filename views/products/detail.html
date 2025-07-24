@@ -24,20 +24,22 @@
   </head>
   <body>
     <header>
-      <img src="../../media/logo.png" alt="logo-dreamie" />
+      <a href="../home.html"
+        ><img src="../../media/logo.png" alt="logo-dreamie"
+      /></a>
       <nav>
         <ul>
-          <li><a href="./products/catalogo.html">Inicio</a></li>
+          <li><a href="../home.html">Inicio</a></li>
           <li class="dropdown">
-            <a href="/sale">Productos </a>
+            <a href="./catalogo.html">Productos </a>
             <ul class="submenu">
-              <li><a href="#">Ropa</a></li>
-              <li><a href="#">Accesorios</a></li>
-              <li><a href="#">Stickers</a></li>
+              <li><a href="./catalogo.html">Ropa</a></li>
+              <li><a href="./catalogo.html">Accesorios</a></li>
+              <li><a href="./catalogo.html">Stickers</a></li>
             </ul>
           </li>
 
-          <li><a href="/signin">Información</a></li>
+          <li><a href="#">Información</a></li>
           <li class="nav__item">
             <a href="#" class="nav__link" aria-label="Buscar">
               <i class="fas fa-search"></i>
@@ -45,7 +47,7 @@
           </li>
           <li class="nav__item">
             <a
-              href="./users/login.html"
+              href="../users/login.html"
               class="nav__link"
               aria-label="Iniciar sesión"
             >
@@ -53,11 +55,7 @@
             </a>
           </li>
           <li class="nav__item">
-            <a
-              href="./pages/carrito.html"
-              class="nav__link"
-              aria-label="Carrito"
-            >
+            <a onclick="toggleCart()">
               <i class="fas fa-shopping-cart"></i>
             </a>
           </li>
