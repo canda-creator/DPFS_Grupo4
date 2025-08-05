@@ -1,0 +1,171 @@
+<style>
+  .cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: pink;
+    z-index: 1;
+    padding: 20px;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .cart-sidebar h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #333;
+  }
+
+  .cart-sidebar button.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #333;
+  }
+
+  .cart-item {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .item-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  .item-price {
+    color: #333;
+    font-weight: bold;
+  }
+
+  .item-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .delete-item {
+    background: none;
+    border: none;
+    color: #570a4a;
+    padding: 0;
+    font-size: 14px;
+  }
+
+  .cantidad-control {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 3px 10px;
+  }
+
+  .cantidad-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+  }
+
+  .cantidad {
+    margin: 0 8px;
+    font-weight: bold;
+  }
+
+  .cart-total {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 20px 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: #333;
+  }
+
+  .comprar-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff70b4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .comprar-btn:hover {
+    background-color: #ff1590;
+  }
+</style>
+<div class="cart-sidebar" style="display: none">
+  <h2>Carrito de compras</h2>
+  <button class="close-btn" onclick="toggleCart()">×</button>
+
+  <!-- Items del carrito -->
+  <div class="cart-item">
+    <div class="item-info">
+      <div class="item-title">Título del producto</div>
+      <div class="item-price">$10.000</div>
+    </div>
+    <div class="item-actions">
+      <button class="delete-item">Borrar</button>
+      <div class="cantidad-control">
+        <button class="cantidad-btn">-</button>
+        <span class="cantidad">1</span>
+        <button class="cantidad-btn">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-item">
+    <div class="item-info">
+      <div class="item-title">Título del producto</div>
+      <div class="item-price">$10.000</div>
+    </div>
+    <div class="item-actions">
+      <button class="delete-item">Borrar</button>
+      <div class="cantidad-control">
+        <button class="cantidad-btn">-</button>
+        <span class="cantidad">1</span>
+        <button class="cantidad-btn">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-item">
+    <div class="item-info">
+      <div class="item-title">Título del producto</div>
+      <div class="item-price">$10.000</div>
+    </div>
+    <div class="item-actions">
+      <button class="delete-item">Borrar</button>
+      <div class="cantidad-control">
+        <button class="cantidad-btn">-</button>
+        <span class="cantidad">1</span>
+        <button class="cantidad-btn">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-total">Total: $30.000</div>
+  <button class="comprar-btn">Iniciar Compra</button>
+</div>
+<script>
+  function toggleCart() {
+    const cart = document.querySelector(".cart-sidebar");
+    cart.style.display = cart.style.display === "none" ? "block" : "none";
+  }
+</script>

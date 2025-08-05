@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs',{style:'detail.css'}) %>
+  <body>
+    <%- include('../partials/header.ejs') %>
+    <main class="product-detail">
+      <div class="product-container">
+        <div class="product-images">
+          <img
+            src="../../media/productos/default.jpg"
+            alt="Nombre del producto"
+          />
+        </div>
+
+        <div class="product-info">
+          <h1>Nombre del producto</h1>
+          <p class="price">$10.000</p>
+
+          <div class="cantidad-selector">
+            <button class="cantidad-btn">-</button>
+            <span class="cantidad">0</span>
+            <button class="cantidad-btn">+</button>
+          </div>
+
+          <button class="add-to-cart">Agregar al carrito</button>
+
+          <div class="product-description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit
+              sollicitudin id, dui facilis suspendisse curaditur lectus ut
+              laoreet semen gravida aptent, sociis dis quis eu eleifend taciti
+              cubilia nullam.
+            </p>
+            <p>
+              Mi nisi tellus turpis elementum parturient purus at fringilla
+              facilisis vestibulum egestas risus potenti euismod laculis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+    <%- include('../partials/carrito.ejs') %>
+  </body>
+</html>

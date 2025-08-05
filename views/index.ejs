@@ -1,8 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head.ejs',{style:'index.css'}) %>
-<body>
-  <%- include('./partials/header.ejs') %>
-  <%- include('./partials/footer.ejs') %>
-</body>
+  <%- include('./partials/head.ejs',{style:'home.css'}) %>
+  <body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+      <img src="../media/gif-mymelody.gif" class="gif__mymelody" alt="" />
+      <div class="texto">
+        <h2 class="texto__titulo">El contraste que te representa 💕💟</h2>
+        <p class="texto__subtitulo">
+          Hecho a mano para soñadores, rebeldes y románticos.
+        </p>
+      </div>
+
+      <section class="seccion-mensaje">
+        <div class="info-mensaje">
+          <h2 class="mensaje__descripcion">
+            ¿Buscas el equilibrio perfecto entre dulzura y misterio?
+          </h2>
+          <p class="mensaje__descripcion">
+            Nuestros accesorios están diseñados para quienes se expresan con
+            estilo.
+          </p>
+          <p class="mensaje__descripcion">
+            Adéntrate en un mundo de corazones pastel, detalles góticos y un
+            encanto único.
+          </p>
+          <div class="mensaje__cta">
+            <button
+              class="mensaje__btn"
+              aria-label="Conocer más sobre nuestros accesorios"
+            >
+              Conocé más
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion-info">
+        <div class="info-imagen">
+          <img src="../media/info-imagen.jpg" alt="Imagen descriptiva" />
+        </div>
+        <div class="info-texto">
+          <h2>Conocé nuestro universo</h2>
+          <p>
+            Creamos accesorios únicos para personas que se animan a expresar su
+            estilo sin miedo. Cada pieza combina dulzura y rebeldía, con un
+            toque de fantasía que te hace brillar.
+          </p>
+        </div>
+      </section>
+
+      <section class="horarios-atencion">
+        <div class="contenedor-imagen">
+          <img src="../media/imagen-horarios.jpg" alt="Imagen horarios" />
+        </div>
+        <div class="contenedor-texto">
+          <h3>Horarios de Atención</h3>
+          <div class="horarios__texto">
+            <p>Lunes a Viernes: 9:00 a 18:00</p>
+            <p>Sábados: 10:00 a 14:00</p>
+            <p>Domingos: Cerrado</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+    <%- include('./partials/carrito.ejs') %>
+  </body>
 </html>
