@@ -7,11 +7,5 @@ module.exports = {
   },
   detail: function (req, res, next) {
     res.render("products/detail", { title: "detail" });
-  },
-  login: function (req, res, next) {
-    res.render("users/login", { title: "Login" });
-  },
-    register: function (req, res, next) {
-        res.render("users/register", { title: "Register" });
-    }
+  }
 };

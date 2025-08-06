@@ -10,8 +10,4 @@ router.get('/catalogo', indexController.catalogo);
 
 router.get('/detail', indexController.detail);
 
-router.get('/login', indexController.login);
-
-router.get('/register', indexController.register);
-
 module.exports = router;
