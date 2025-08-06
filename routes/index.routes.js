@@ -10,4 +10,6 @@ router.get('/catalogo', indexController.catalogo);
 
 router.get('/detail', indexController.detail);
 
+router.get('/create', indexController.create);
+
 module.exports = router;

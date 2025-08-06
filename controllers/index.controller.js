@@ -7,5 +7,8 @@ module.exports = {
   },
   detail: function (req, res, next) {
     res.render("products/detail", { title: "detail" });
+  },
+  create: function (req, res, next) {
+    res.render("products/create", { title: "create" });
   }
 };

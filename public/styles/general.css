@@ -122,6 +122,27 @@ nav ul a {
     }
 }
 
+nav.nav-visible {
+  display: block;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: var(--fondo);
+  padding: 20px 40px;
+  z-index: 1000;
+}
+
+nav.nav-visible ul {
+  flex-direction: column;
+  gap: 15px;
+}
+
+nav {
+  transition: all 0.3s ease-in-out;
+}
+
+
 .gif__mymelody {
     width: 100%;
     height: auto;
