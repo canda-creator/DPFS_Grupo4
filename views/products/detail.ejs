@@ -13,8 +13,8 @@
         </div>
 
         <div class="product-info">
-          <h1>Nombre del producto</h1>
-          <p class="price">$10.000</p>
+          <h1><%= product.name %></h1>
+          <p class="price">$<%= product.price %></p>
 
           <div class="cantidad-selector">
             <button class="cantidad-btn">-</button>
@@ -26,14 +26,7 @@
 
           <div class="product-description">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipiscing elit
-              sollicitudin id, dui facilis suspendisse curaditur lectus ut
-              laoreet semen gravida aptent, sociis dis quis eu eleifend taciti
-              cubilia nullam.
-            </p>
-            <p>
-              Mi nisi tellus turpis elementum parturient purus at fringilla
-              facilisis vestibulum egestas risus potenti euismod laculis.
+              <strong>Descripción:</strong> <%= product.description %>
             </p>
           </div>
         </div>
