@@ -6,9 +6,19 @@ var indexController = require('../controllers/index.controller');
 /* GET home page. */
 router.get('/', indexController.index);
 
-router.get('/catalogo', indexController.catalogo);
+router.get('/catalogo', indexController.products);
 
-router.get('/detail', indexController.detail);
+router.get('/catalogo/create', indexController.createForm);
+
+router.get('/catalogo/:id', indexController.detail);
+
+router.get('/catalogo/:id/edit', indexController.edit);
+
+router.post('/catalogo', indexController.products);
+
+router.put('/catalogo/:id', indexController.products);
+
+router.delete('/catalogo/:id', indexController.products);
 
 router.get('/create', indexController.create);
 
