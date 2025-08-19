@@ -1,0 +1,11 @@
+[
+ {
+  "id": 1,
+  "name": "Nombre producto",
+  "description": "Descripcion del producto",
+  "image": "/ruta/a/la/imagen.webp",
+  "category": "Accesorios",
+  "colors": "Negro",
+  "price": "25.000"
+ }
+]
