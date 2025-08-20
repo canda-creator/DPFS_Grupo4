@@ -6,27 +6,29 @@
     <main>
       <h1>Todos los productos</h1>
 
-      <% products.forEach(product => { %>
       <div class="productos-container">
+        <% products.forEach(product => { %>
         <div class="producto">
           <a href="./catalogo/<%= product.id %>">
-            <img src="../../media/productos/<%= product.image ? product.image : 'default.jpg' %>" />
+            <img
+              src="../../media/productos/<%= product.image ? product.image : 'default.jpg' %>"
+            />
           </a>
           <h3><%= product.name %></h3>
           <div class="precio">$<%= product.price %></div>
           <button class="btn-comprar">Añadir al carrito</button>
         </div>
+        <% }) %>
       </div>
-      <% }) %>
-
+      
     </main>
-    <%- include('../partials/footer.ejs') %>
-    <%- include('../partials/carrito.ejs') %>
-        <script>
-  document.querySelector(".menu").addEventListener("click", () => {
-    const nav = document.querySelector("nav");
-    nav.classList.toggle("nav-visible");
-  });
-</script>
+    <%- include('../partials/footer.ejs') %> <%-
+    include('../partials/carrito.ejs') %>
+    <script>
+      document.querySelector(".menu").addEventListener("click", () => {
+        const nav = document.querySelector("nav");
+        nav.classList.toggle("nav-visible");
+      });
+    </script>
   </body>
 </html>
