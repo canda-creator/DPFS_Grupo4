@@ -11,33 +11,37 @@
           height="148"
         />
       </a>
+
       <h1 class="titulo__register">Crear producto</h1>
-      <form action="get" class="form-register">
-        <label for="nombre">Nombre</label>
-        <input
-          type="text"
-          id="nombre"
-          placeholder="Nombre"
-          required
-        />
+
+      <form action="/catalogo" method="POST" class="form-register">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" placeholder="Nombre" required />
 
         <label for="description">Descripción</label>
-        <textarea name="description" id="description" placeholder="Breve descripción del producto"></textarea>
-        <label for="imagen">Agrega una imagen</label>
-        <input
-          type="file"
-          id="file"
-        />
+        <textarea
+          name="description"
+          id="description"
+          placeholder="Breve descripción del producto"
+        ></textarea>
+        <label for="image">Agrega una imagen</label>
+        <input type="file" id="image" />
 
-        <label for="categoria">Categoría:</label>
-        <select id="categoria" name="categoria">
+        <label for="category">Categoría:</label>
+        <select id="category" name="category">
           <option value="ropa">Ropa</option>
           <option value="accesorios">Accesorios</option>
           <option value="stickers">Stickers</option>
         </select>
 
-        <label for="precio">Precio:</label>
-        <input type="number" id="precio" name="precio" step="0.01" value="0.00">
+        <label for="price">Precio:</label>
+        <input
+          type="number"
+          id="price"
+          name="price"
+          step="0.01"
+          value="0.00"
+        />
 
         <button type="submit">Agregar</button>
       </form>
@@ -46,13 +50,13 @@
         <a href="/editar">Hacé click acá</a>
       </div>
     </main>
-    <%- include('../partials/footer.ejs') %>
-    <%- include('../partials/carrito.ejs') %>
-        <script>
-  document.querySelector(".menu").addEventListener("click", () => {
-    const nav = document.querySelector("nav");
-    nav.classList.toggle("nav-visible");
-  });
-</script>
+    <%- include('../partials/footer.ejs') %> <%-
+    include('../partials/carrito.ejs') %>
+    <script>
+      document.querySelector(".menu").addEventListener("click", () => {
+        const nav = document.querySelector("nav");
+        nav.classList.toggle("nav-visible");
+      });
+    </script>
   </body>
 </html>

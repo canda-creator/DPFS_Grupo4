@@ -14,12 +14,10 @@ router.get('/catalogo/:id', indexController.detail);
 
 router.get('/catalogo/:id/edit', indexController.edit);
 
-router.post('/catalogo', indexController.products);
+router.post('/catalogo', indexController.create);
 
 router.put('/catalogo/:id', indexController.products);
 
 router.delete('/catalogo/:id', indexController.products);
-
-router.get('/create', indexController.create);
 
 module.exports = router;
