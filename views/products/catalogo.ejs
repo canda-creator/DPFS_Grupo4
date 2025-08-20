@@ -6,9 +6,15 @@
     <main>
       <h1>Todos los productos</h1>
 
+      <a href="/catalogo/create"><button>Crear producto</button></a>
+
       <div class="productos-container">
         <% products.forEach(product => { %>
         <div class="producto">
+          <div class="btn-producto">
+            <a href="/catalogo/create"><button>Modificar</button></a>
+            <a href="/catalogo/create"><button>Eliminar</button></a>
+          </div>
           <a href="./catalogo/<%= product.id %>">
             <img
               src="../../media/productos/<%= product.image ? product.image : 'default.jpg' %>"
@@ -20,7 +26,6 @@
         </div>
         <% }) %>
       </div>
-      
     </main>
     <%- include('../partials/footer.ejs') %> <%-
     include('../partials/carrito.ejs') %>
