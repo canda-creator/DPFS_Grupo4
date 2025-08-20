@@ -7,5 +7,12 @@
     "category": "Accesorios",
     "colors": "Negro",
     "price": "25.000"
+  },
+  {
+    "id": 1755650354327,
+    "name": "candela",
+    "description": "",
+    "category": "ropa",
+    "price": "10000"
   }
 ]
