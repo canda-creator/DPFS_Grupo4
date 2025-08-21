@@ -15,9 +15,20 @@
 
       <h1 class="titulo__register">Crear producto</h1>
 
-      <form action="/create" method="POST" class="form-register">
+      <form
+        action="/create"
+        method="POST"
+        class="form-register"
+        enctype="multipart/form-data"
+      >
         <label for="name">Nombre</label>
-        <input type="text" id="name" name="name" placeholder="Nombre" required />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Nombre"
+          required
+        />
 
         <label for="description">Descripción</label>
         <textarea
@@ -27,7 +38,7 @@
         ></textarea>
 
         <label for="image">Nombre de la imagen (ej: producto.jpg)</label>
-        <input type="text" id="image" name="image" placeholder="producto.jpg" />
+        <input type="file" id="image" name="image" placeholder="producto.jpg" />
 
         <label for="category">Categoría:</label>
         <select id="category" name="category">
@@ -45,13 +56,7 @@
         />
 
         <label for="price">Precio:</label>
-        <input
-          type="number"
-          id="price"
-          name="price"
-          step="0.01"
-          value="0.00"
-        />
+        <input type="number" id="price" name="price" step="0.01" value="0.00" />
 
         <button type="submit">Agregar</button>
       </form>
@@ -62,8 +67,8 @@
       </div>
     </main>
 
-    <%- include('../partials/footer.ejs') %>
-    <%- include('../partials/carrito.ejs') %>
+    <%- include('../partials/footer.ejs') %> <%-
+    include('../partials/carrito.ejs') %>
 
     <script>
       document.querySelector(".menu").addEventListener("click", () => {

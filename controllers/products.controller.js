@@ -16,7 +16,7 @@ module.exports = {
       id: Date.now(),
       name: req.body.name,
       description: req.body.description,
-      image: req.body.image,
+      image: req.file ? req.file.filename : "default.jpg",
       category: req.body.category,
       colors: req.body.colors,
       price: req.body.price,
@@ -29,17 +29,20 @@ module.exports = {
     const product = products.find((p) => p.id == req.params.id);
     res.render("products/detail", { title: "Detalle", product });
   },
-editForm: (req, res) => {
-  const product = products.find((p) => p.id == req.params.id);
-  if (!product) return res.status(404).send("Producto no encontrado");
-  res.render("products/edit", { title: "Editar producto", product });
-},
+  editForm: (req, res) => {
+    const product = products.find((p) => p.id == req.params.id);
+    if (!product) return res.status(404).send("Producto no encontrado");
+    res.render("products/edit", { title: "Editar producto", product });
+  },
 
   edit: (req, res) => {
     const id = Number(req.params.id);
     const index = products.findIndex((p) => p.id === id);
     if (index !== -1) {
       products[index] = { ...products[index], ...req.body, id };
+      if (req.file) {
+        products[index].image = req.file.filename;
+      }
       fs.writeFileSync(productsFile, JSON.stringify(products, null, 2));
     }
     res.redirect("/catalogo");
@@ -48,5 +51,5 @@ editForm: (req, res) => {
     products = products.filter((p) => p.id != req.params.id);
     fs.writeFileSync(productsFile, JSON.stringify(products, null, 2));
     res.redirect("/catalogo");
-  }
+  },
 };

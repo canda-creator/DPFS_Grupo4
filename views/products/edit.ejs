@@ -6,7 +6,7 @@
     <main>
       <h1 class="titulo__register">Editar producto</h1>
 
-      <form action="/edit/<%= product.id %>" method="POST" class="form-register">
+      <form action="/edit/<%= product.id %>" method="POST" class="form-register" enctype="multipart/form-data">
         <label for="name">Nombre</label>
         <input type="text" id="name" name="name" value="<%= product.name %>" required />
 
@@ -14,7 +14,7 @@
         <textarea name="description" id="description"><%= product.description %></textarea>
 
         <label for="image">Imagen (nombre de archivo)</label>
-        <input type="text" id="image" name="image" value="<%= product.image %>" />
+        <input type="file" id="image" name="image" value="<%= product.image %>" />
 
         <label for="category">Categoría</label>
         <select id="category" name="category">
