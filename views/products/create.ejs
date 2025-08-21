@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head.ejs',{style:'login.css'}) %>
+  <%- include('../partials/head.ejs', { style: 'login.css' }) %>
   <body>
     <%- include('../partials/header.ejs') %>
+
     <main>
       <a href="https://www.glitter-graphics.com" class="glitter__fija">
         <img
@@ -14,7 +15,7 @@
 
       <h1 class="titulo__register">Crear producto</h1>
 
-      <form action="/catalogo" method="POST" class="form-register">
+      <form action="/create" method="POST" class="form-register">
         <label for="name">Nombre</label>
         <input type="text" id="name" name="name" placeholder="Nombre" required />
 
@@ -24,8 +25,9 @@
           id="description"
           placeholder="Breve descripción del producto"
         ></textarea>
-        <label for="image">Agrega una imagen</label>
-        <input type="file" id="image" />
+
+        <label for="image">Nombre de la imagen (ej: producto.jpg)</label>
+        <input type="text" id="image" name="image" placeholder="producto.jpg" />
 
         <label for="category">Categoría:</label>
         <select id="category" name="category">
@@ -33,6 +35,14 @@
           <option value="accesorios">Accesorios</option>
           <option value="stickers">Stickers</option>
         </select>
+
+        <label for="colors">Colores:</label>
+        <input
+          type="text"
+          id="colors"
+          name="colors"
+          placeholder="Ej: rojo, azul, verde"
+        />
 
         <label for="price">Precio:</label>
         <input
@@ -45,13 +55,16 @@
 
         <button type="submit">Agregar</button>
       </form>
+
       <div class="login-register-link">
         <span>¿Querés editar un producto?</span>
-        <a href="/editar">Hacé click acá</a>
+        <a href="/catalogo">Volver al catálogo</a>
       </div>
     </main>
-    <%- include('../partials/footer.ejs') %> <%-
-    include('../partials/carrito.ejs') %>
+
+    <%- include('../partials/footer.ejs') %>
+    <%- include('../partials/carrito.ejs') %>
+
     <script>
       document.querySelector(".menu").addEventListener("click", () => {
         const nav = document.querySelector("nav");

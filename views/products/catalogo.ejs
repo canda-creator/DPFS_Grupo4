@@ -6,20 +6,33 @@
     <main>
       <h1>Todos los productos</h1>
 
-      <a href="/catalogo/create"><button>Crear producto</button></a>
+      <a href="/create"><button>Crear producto</button></a>
 
       <div class="productos-container">
         <% products.forEach(product => { %>
         <div class="producto">
           <div class="btn-producto">
-            <a href="/catalogo/create"><button>Modificar</button></a>
-            <a href="/catalogo/create"><button>Eliminar</button></a>
+
+            <a href="/edit/<%= product.id %>">
+              <button>Modificar</button>
+            </a>
+
+            <form
+              action="/delete/<%= product.id %>"
+              method="POST"
+              style="display: inline"
+            >
+              <button type="submit">Eliminar</button>
+            </form>
           </div>
-          <a href="./catalogo/<%= product.id %>">
+
+          <a href="/detail/<%= product.id %>">
             <img
-              src="../../media/productos/<%= product.image ? product.image : 'default.jpg' %>"
+              src="/media/productos/<%= product.image ? product.image : 'default.jpg' %>"
+              alt="<%= product.name %>"
             />
           </a>
+
           <h3><%= product.name %></h3>
           <div class="precio">$<%= product.price %></div>
           <button class="btn-comprar">Añadir al carrito</button>
@@ -27,8 +40,10 @@
         <% }) %>
       </div>
     </main>
-    <%- include('../partials/footer.ejs') %> <%-
-    include('../partials/carrito.ejs') %>
+
+    <%- include('../partials/footer.ejs') %>
+    <%- include('../partials/carrito.ejs') %>
+
     <script>
       document.querySelector(".menu").addEventListener("click", () => {
         const nav = document.querySelector("nav");

@@ -1,18 +1,11 @@
 [
   {
-    "id": 1,
-    "name": "Nombre producto",
-    "description": "Descripcion del producto",
-    "image": "",
-    "category": "Accesorios",
-    "colors": "Negro",
-    "price": "25.000"
-  },
-  {
-    "id": 1755650354327,
-    "name": "candela",
+    "id": 1755801237428,
+    "name": "w",
     "description": "",
+    "image": "",
     "category": "ropa",
-    "price": "10000"
+    "colors": "",
+    "price": "0.00"
   }
 ]
