@@ -3,7 +3,7 @@ const router = express.Router();
 const productsController = require("../controllers/products.controller");
 const { uploadProd } = require("../middlewares/multer");
 
-router.get("/catalogo", productsController.catalogo);
+router.get("/", productsController.catalogo);
 
 router.get("/create", productsController.createForm);
 

@@ -6,19 +6,19 @@
     <main>
       <h1>Todos los productos</h1>
 
-      <a href="/create" class="center"><button class="btn">Crear producto</button></a>
+      <a href="products/create/" class="center"><button class="btn">Crear producto</button></a>
 
       <div class="productos-container">
         <% products.forEach(product => { %>
         <div class="producto">
           <div class="btn-producto">
 
-            <a href="/edit/<%= product.id %>">
+            <a href="products/edit/<%= product.id %>">
               <button class="btn btn-product">Modificar</button>
             </a>
 
             <form
-              action="/delete/<%= product.id %>"
+              action="products/delete/<%= product.id %>"
               method="POST"
               style="display: inline"
             >
@@ -26,7 +26,7 @@
             </form>
           </div>
 
-          <a href="/detail/<%= product.id %>">
+          <a href="products/detail/<%= product.id %>">
             <img
               src="/media/productos/<%= product.image ? product.image : 'default.jpg' %>"
               alt="<%= product.name %>"

@@ -23,7 +23,7 @@ module.exports = {
     };
     products.push(newProduct);
     fs.writeFileSync(productsFile, JSON.stringify(products, null, 2));
-    res.redirect("/catalogo");
+    res.redirect("/products");
   },
   detail: (req, res) => {
     const product = products.find((p) => p.id == req.params.id);
@@ -45,11 +45,11 @@ module.exports = {
       }
       fs.writeFileSync(productsFile, JSON.stringify(products, null, 2));
     }
-    res.redirect("/catalogo");
+    res.redirect("/products");
   },
   delete: (req, res) => {
     products = products.filter((p) => p.id != req.params.id);
     fs.writeFileSync(productsFile, JSON.stringify(products, null, 2));
-    res.redirect("/catalogo");
+    res.redirect("/products");
   },
 };
