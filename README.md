@@ -6,7 +6,7 @@
 🔗 [Tablero Trello](https://trello.com/invite/b/68365e68dafacd3e7d5cadbb/ATTIec3201df95f4d6cec2ae46e0bb7a0019430A1FAD/proyecto-canda)
 
 ## dreamie - Presentación del proyecto
-![Logo de Dreamie](media/logo.png)
+![Logo de Dreamie](/media/logo.png)
 
 
 ## 🌍 Público Destinado
