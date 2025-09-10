@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 const session = require("express-session");
+const userLogged = require("./middlewares/userLogged")
 
 var indexRouter = require('./routes/index.routes');
 var usersRouter = require('./routes/users.routes');
@@ -22,10 +23,12 @@ app.use(session({
   saveUninitialized:true,
 }));
 
+app.use(cookieParser());
+app.use(userLogged);
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);

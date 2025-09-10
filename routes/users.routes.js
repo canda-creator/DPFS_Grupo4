@@ -1,20 +1,19 @@
-var express = require("express");
-var router = express.Router();
-const { uploadUser } = require("../middlewares/multer");
-var indexController = require("../controllers/user.controller");
-const {processLogin} = require("../controllers/user.controller")
+const express = require('express');
+const router = express.Router();
+const { uploadUser } = require('../middlewares/multer');
+const userController = require('../controllers/user.controller');
+const logged = require('../middlewares/logged');
 
-router.get("/", (req, res) => {
-  res.redirect("/users/login");
-});
+// públicas
+router.get('/login', userController.login);
+router.post('/login', userController.processLogin);
+router.get('/register', userController.register);
+router.post('/register', uploadUser.single('profile'), userController.processRegister);
 
-router.get("/login", indexController.login);
+// logout
+router.post('/logout', userController.logout);
 
-router.post("/login", indexController.processLogin);
-router.get("/register", indexController.register);
+// ✅ SOLO esta
+router.get('/profile', logged, userController.profile);
 
-
-router.post("/register", uploadUser.single("profile"), indexController.processRegister);
-
-router.get("/profile", indexController.profile);
 module.exports = router;

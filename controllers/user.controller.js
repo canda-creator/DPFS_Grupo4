@@ -9,8 +9,14 @@ module.exports = {
   login: function (req, res, next) {
     res.render("users/login", { title: "Login" });
   },
+logout: (req, res) => {
+  req.session.destroy(() => {
+    res.clearCookie('email');       
+    res.clearCookie('connect.sid'); 
+    return res.redirect('/users/login'); // o '/' si preferí
+  });
+},
   processLogin: (req,res)=>{
-    console.log(req.body);
     const users = JSON.parse(fs.readFileSync(usersPath, "utf8"));
     const userFound = users.find(user=>user.email == req.body.email);
     if(userFound){
@@ -20,18 +26,20 @@ module.exports = {
         if(req.body.rememberme == "on"){
           res.cookie("email", userFound.email, {maxAge: 60*1000*60})
         }  
-        res.redirect("/users/profile")  
+        return res.redirect("/users/profile")  
       }else{
-        res.send("La contraseña es incorrecta")
+        return res.send("La contraseña es incorrecta")
       }
     }
+    console.log("Los datos no están bien")
+    res.redirect("/users/login")
   },
   register: function (req, res, next) {
     res.render("users/register", { title: "Register" });
   },
+  
   profile:function (req, res, next){
-    console.log(req.session);
-    res.render("users/profile.ejs", {title:"Express"});
+    res.render("users/profile.ejs");
   },
   processRegister: (req, res) =>{
     const users = JSON.parse(fs.readFileSync(usersPath, "utf8"));

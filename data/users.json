@@ -5,5 +5,43 @@
   "profile": "avatar-1757522702756.jpeg",
   "rol": "user",
   "password": "$2b$12$WR0W7nthtx2g.UviNTUQMO5/x6G2aom/spRz4PKq3ht/mFcyTND2K"
+ },
+ {
+  "id": "c2c2a8f5-278b-4f06-881e-ffb1b1d4333f",
+  "email": "candelaalfonso13@gmail.com",
+  "profile": "avatar-1757530558578.jpeg",
+  "rol": "user",
+  "password": "$2b$12$x3ygjYvU.4lfzEJ7M93m/.JsiwYUApMn9i6/VTIgluVRf4c1pINWi"
+ },
+ {
+  "id": "b86f7972-9405-4236-b8f1-d0aec5d516a8",
+  "email": "candeabalosa2001@gmail.com",
+  "profile": "avatar-1757530592747.jpeg",
+  "rol": "user",
+  "password": "$2b$12$yhfYOf9.qyG2TA3EzDFtHu/o9cN8jafe9iyZq.kvyj1uxdEa1bKa6"
+ },
+ {
+  "id": "7eead9c6-6d03-40f4-b81f-8dd58ff38050",
+  "name": "Cosme Fulanito",
+  "email": "candelaalfonso13@gmail.com",
+  "profile": "avatar-1757530897096.jpeg",
+  "rol": "user",
+  "password": "$2b$12$.1B4aDvLx3YTAUjge3sDGuqc.pTynI8tQan.GwHwzzKRYVddXyKBq"
+ },
+ {
+  "id": "3b20da0e-0a8c-40cc-95b0-11d5dce93ace",
+  "name": "Bautista",
+  "email": "hola@gmail.com",
+  "profile": "avatar-1757530962396.jpeg",
+  "rol": "user",
+  "password": "$2b$12$29yUyCItDv267GwmaCEbWO3zq2PhvQj8Rm61qY4nn0H0huc4ogZPq"
+ },
+ {
+  "id": "33a323e5-7a14-42f6-a940-7dd665d8d2ca",
+  "name": "juan",
+  "email": "holis@gmail.com",
+  "profile": "avatar-1757535980619.jpeg",
+  "rol": "user",
+  "password": "$2b$12$43nBh33JKc13DaYGr5ISCORHksFadhZdwjanGTCyvI8hwSinUXbU2"
  }
 ]
