@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 const { uploadUser } = require("../middlewares/multer");
 var indexController = require("../controllers/user.controller");
+const {processLogin} = require("../controllers/user.controller")
 
 router.get("/", (req, res) => {
   res.redirect("/users/login");
@@ -9,6 +10,7 @@ router.get("/", (req, res) => {
 
 router.get("/login", indexController.login);
 
+router.post("/login", indexController.processLogin);
 router.get("/register", indexController.register);
 
 

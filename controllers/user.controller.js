@@ -9,6 +9,9 @@ module.exports = {
   login: function (req, res, next) {
     res.render("users/login", { title: "Login" });
   },
+  processLogin: (req,res)=>{
+    console.log(req.body);
+  },
   register: function (req, res, next) {
     res.render("users/register", { title: "Register" });
   },
