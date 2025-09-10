@@ -1,3 +1,5 @@
+const{v4: uuid} = require("uuid");
+
 const fs = require("fs");
 const path = require("path");
 
@@ -13,7 +15,7 @@ module.exports = {
   },
   create: (req, res) => {
     const newProduct = {
-      id: Date.now(),
+      id: uuid(),
       name: req.body.name,
       description: req.body.description,
       image: req.file ? req.file.filename : "default.jpg",

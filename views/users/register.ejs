@@ -5,16 +5,20 @@
     <%- include('../partials/header.ejs') %>
         <main>
       <h1 class="titulo__register">Crear cuenta</h1>
-      <form action="get" class="form-register">
+      <form action="" class="form-register" method="post" enctype="multipart/form-data">
         <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" placeholder="Nombre" required />
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required />
 
         <label for="apellido">Apellido</label>
-        <input type="text" id="apellido" placeholder="Apellido" required />
+        <input type="text" name="apellido" id="apellido" placeholder="Apellido" required />
+
+        <label for="">Agregá una imagen</label>
+        <input type= "file" required name="profile">
 
         <label for="email">E-mail</label>
         <input
           type="email"
+          name="email"
           id="email"
           placeholder="Correo electrónico"
           required
@@ -23,6 +27,7 @@
         <label for="password">Contraseña</label>
         <input
           type="password"
+          name="contraseña"
           id="password"
           placeholder="Contraseña"
           required
