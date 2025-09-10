@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs',{style:'login.css'}) %>
+  <body>
+    <%- include('../partials/header.ejs') %>
+    <main>
+      Vista de perfil
+    </main>
+    <%- include('../partials/footer.ejs') %>
+    <%- include('../partials/carrito.ejs') %>
+        <script>
+  document.querySelector(".menu").addEventListener("click", () => {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("nav-visible");
+  });
+</script>
+  </body>
+</html>

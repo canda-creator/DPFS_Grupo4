@@ -11,9 +11,27 @@ module.exports = {
   },
   processLogin: (req,res)=>{
     console.log(req.body);
+    const users = JSON.parse(fs.readFileSync(usersPath, "utf8"));
+    const userFound = users.find(user=>user.email == req.body.email);
+    if(userFound){
+      const isPassOk = bycrypt.compareSync(req.body.password, userFound.password)
+      if(isPassOk){
+        req.session.userLogged = userFound  
+        if(req.body.rememberme == "on"){
+          res.cookie("email", userFound.email, {maxAge: 60*1000*60})
+        }  
+        res.redirect("/users/profile")  
+      }else{
+        res.send("La contraseña es incorrecta")
+      }
+    }
   },
   register: function (req, res, next) {
     res.render("users/register", { title: "Register" });
+  },
+  profile:function (req, res, next){
+    console.log(req.session);
+    res.render("users/profile.ejs", {title:"Express"});
   },
   processRegister: (req, res) =>{
     const users = JSON.parse(fs.readFileSync(usersPath, "utf8"));

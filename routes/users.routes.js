@@ -16,4 +16,5 @@ router.get("/register", indexController.register);
 
 router.post("/register", uploadUser.single("profile"), indexController.processRegister);
 
+router.get("/profile", indexController.profile);
 module.exports = router;

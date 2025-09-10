@@ -13,7 +13,7 @@
         <div class="producto">
           <div class="btn-producto">
 
-            <a href="products/edit/<%= product.id %>">
+            <a href="/products/edit/<%= product.id %>">
               <button class="btn btn-product">Modificar</button>
             </a>
 
@@ -26,7 +26,7 @@
             </form>
           </div>
 
-          <a href="products/detail/<%= product.id %>">
+          <a href="/products/detail/<%= product.id %>">
             <img
               src="/media/productos/<%= product.image ? product.image : 'default.jpg' %>"
               alt="<%= product.name %>"
