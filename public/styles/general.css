@@ -148,6 +148,12 @@ nav {
     height: auto;
 }
 
+#avatarHeader {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
 footer{
     background-color: #fee9ee;
     display: flex;
