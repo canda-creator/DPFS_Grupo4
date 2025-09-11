@@ -5,6 +5,7 @@
     <%- include('../partials/header.ejs') %>
     <main>
       Vista de perfil de <%= locals.userLogged.name %>
+      <img src="/media/users/<%= locals.userLogged.profile %>" alt="foto de perfil de <%= locals.userLogged.name %>">
     </main>
     <%- include('../partials/footer.ejs') %>
     <%- include('../partials/carrito.ejs') %>

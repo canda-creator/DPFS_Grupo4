@@ -39,7 +39,7 @@ module.exports = {
 
   edit: (req, res) => {
 const id = String(req.params.id);
-const index = products.findIndex(p => String(p.id) === id); // <- ahora sí lo encuentra
+const index = products.findIndex(p => String(p.id) === id);
 
     if (index !== -1) {
       products[index] = { ...products[index], ...req.body, id };

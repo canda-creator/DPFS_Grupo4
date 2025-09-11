@@ -2,10 +2,11 @@ const express = require("express");
 const router = express.Router();
 const productsController = require("../controllers/products.controller");
 const { uploadProd } = require("../middlewares/multer");
+const admin = require("../middlewares/auth/admin");
 
 router.get("/", productsController.catalogo);
 
-router.get("/create", productsController.createForm);
+router.get("/create", admin, productsController.createForm);
 
 router.post("/create", uploadProd.single("image"), productsController.create);
 

@@ -3,7 +3,7 @@ const path = require("path")
 const usersPath = path.join(__dirname, "../data/users.json");
 
 function userLogged(req,res,next){
-      res.locals.isLogged   = false;
+  res.locals.isLogged   = false;
   res.locals.userLogged = null;
   res.locals.isAdmin    = false;
     if(req.session && req.session.userLogged){

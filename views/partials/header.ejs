@@ -2,6 +2,10 @@
   <a href="/"><img src="/media/logo.png" alt="logo-dreamie" /></a>
   <nav>
     <ul>
+<% if (isAdmin) { %>
+  <li>💖</li>
+<% } %>
+
       <li><a href="/">Inicio</a></li>
       <li class="dropdown">
         <a href="/products">Productos </a>

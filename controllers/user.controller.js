@@ -1,4 +1,4 @@
-const bycrypt = require ("bcryptjs")
+const bcrypt = require('bcryptjs');
 const{v4: uuid} = require("uuid");
 const fs = require("fs");
 const path = require("path");
@@ -7,33 +7,39 @@ const usersPath = path.join(__dirname, "../data/users.json");
 
 module.exports = {
   login: function (req, res, next) {
-    res.render("users/login", { title: "Login" });
+    res.render("users/login", { title: "Login", error:null });
   },
 logout: (req, res) => {
   req.session.destroy(() => {
     res.clearCookie('email');       
     res.clearCookie('connect.sid'); 
-    return res.redirect('/users/login'); // o '/' si preferí
+    return res.redirect('/users/login');
   });
 },
   processLogin: (req,res)=>{
-    const users = JSON.parse(fs.readFileSync(usersPath, "utf8"));
-    const userFound = users.find(user=>user.email == req.body.email);
-    if(userFound){
-      const isPassOk = bycrypt.compareSync(req.body.password, userFound.password)
-      if(isPassOk){
-        req.session.userLogged = userFound  
-        if(req.body.rememberme == "on"){
-          res.cookie("email", userFound.email, {maxAge: 60*1000*60})
-        }  
-        return res.redirect("/users/profile")  
-      }else{
-        return res.send("La contraseña es incorrecta")
-      }
-    }
-    console.log("Los datos no están bien")
-    res.redirect("/users/login")
-  },
+    const users = JSON.parse(fs.readFileSync(usersPath, "utf8")|| '[]');
+    const userFound = users.find(u=>u.email === req.body.email);
+      if (!userFound) {
+    return res.status(400).render('users/login', {
+      title: 'Login',
+      error: { msg: 'Usuario no encontrado' }
+    });
+  }
+
+  const ok = bcrypt.compareSync(req.body.password, userFound.password);
+  if (!ok) {
+    return res.status(400).render('users/login', {
+      title: 'Login',
+      error: { msg: 'Contraseña incorrecta' }
+    });
+  }
+
+  req.session.userLogged = userFound;
+  if (req.body.rememberme === 'on') {
+    res.cookie('email', userFound.email, { maxAge: 1000 * 60 * 60 });
+  }
+  return res.redirect('/users/profile');
+},
   register: function (req, res, next) {
     res.render("users/register", { title: "Register" });
   },
@@ -50,7 +56,7 @@ logout: (req, res) => {
       email: req.body.email,
       profile: req.file?.filename || "default-profile.png",
       rol: "user",
-      password: bycrypt.hashSync(req.body.password, 12)
+      password: bcrypt.hashSync(req.body.password, 12) 
     }
 
     users.push(newUser)

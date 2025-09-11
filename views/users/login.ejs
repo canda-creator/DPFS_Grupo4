@@ -13,6 +13,10 @@
       </a>
       <h1 class="titulo__register">Iniciar Sesión</h1>
       <form action="/users/login" class="form-register" method="post">
+        <% if (typeof error !== 'undefined' && error && error.msg) { %>
+  <small class="error"><%= error.msg %></small>
+<% } %>
+
         <label for="email">E-mail</label>
         <input
           type="email"
