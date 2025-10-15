@@ -1,8 +1,8 @@
 [
-  {
-    "id": "d132bb62-be9a-4bea-9c9e-46bdcde69c2b",
-    "name": "Rosario",
-    "description": "",
+{
+    "id": "1",
+    "name": "Rosa",
+    "code": "#FFFF00",
     "image": "default.jpg",
     "category": "accesorios",
     "colors": "Blanco, negro",
