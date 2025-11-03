@@ -8,6 +8,7 @@ const session = require("express-session");
 const userLogged = require("./middlewares/auth/userLogged")
 
 const db = require('./database/models')
+db.sequelize.sync(); // crea tablas si no existen
 
 var indexRouter = require('./routes/index.routes');
 var usersRouter = require('./routes/users.routes');

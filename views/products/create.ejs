@@ -42,18 +42,17 @@
 
         <label for="category">Categoría:</label>
         <select id="category" name="category">
-          <option value="ropa">Ropa</option>
-          <option value="accesorios">Accesorios</option>
-          <option value="stickers">Stickers</option>
+          <% categories.forEach(category => { %>
+            <option value="<%= category.id %>"><%= category.name %></option>
+          <% }) %>
         </select>
 
-        <label for="colors">Colores:</label>
-        <input
-          type="text"
-          id="colors"
-          name="colors"
-          placeholder="Ej: rojo, azul, verde"
-        />
+        <label for="colors">Color:</label>
+        <select id="colors" name="colors">
+          <% colors.forEach(color => { %>
+          <option value="<%= color.id %>"><%= color.name %></option>
+          <% }) %>
+        </select>
 
         <label for="price">Precio:</label>
         <input type="number" id="price" name="price" step="0.01" value="0.00" />

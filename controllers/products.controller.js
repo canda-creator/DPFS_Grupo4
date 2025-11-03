@@ -1,58 +1,73 @@
-const{v4: uuid} = require("uuid");
-
-const fs = require("fs");
-const path = require("path");
-
-const productsFile = path.join(__dirname, "../data/products.json");
-let products = JSON.parse(fs.readFileSync(productsFile, "utf-8"));
+const { v4: uuidv4 } = require("uuid");
+const db = require("../database/models");
 
 module.exports = {
-  catalogo: (req, res) => {
+  catalogo: async (req, res) => {
+    const products = await db.Product.findAll();
     res.render("products/catalogo", { title: "Catálogo", products });
   },
-  createForm: (req, res) => {
-    res.render("products/create", { title: "Crear producto" });
+
+  createForm: async (req, res) => {
+    const colors = await db.Color.findAll(); 
+    const categories = await db.Category.findAll();
+    res.render("products/create", { title: "Crear producto", colors, categories });
   },
-  create: (req, res) => {
+
+  create: async (req, res) => {
     const newProduct = {
-      id: uuid(),
+      id: uuidv4(),
       name: req.body.name,
       description: req.body.description,
       image: req.file ? req.file.filename : "default.jpg",
-      category: req.body.category,
-      colors: req.body.colors,
+      category_id: req.body.category,
+      color_id: req.body.colors,
       price: req.body.price,
     };
-    products.push(newProduct);
-    fs.writeFileSync(productsFile, JSON.stringify(products, null, 2));
+
+    await db.Product.create(newProduct);
     res.redirect("/products");
   },
-  detail: (req, res) => {
-    const product = products.find((p) => p.id == req.params.id);
+
+  detail: async (req, res) => {
+    const product = await db.Product.findByPk(req.params.id);
+    if (!product) return res.status(404).send("Producto no encontrado");
     res.render("products/detail", { title: "Detalle", product });
   },
-  editForm: (req, res) => {
-    const product = products.find((p) => p.id == req.params.id);
+
+  editForm: async (req, res) => {
+    const product = await db.Product.findByPk(req.params.id);
+    const colors = await db.Color.findAll(); 
+    const categories = await db.Category.findAll();
+
     if (!product) return res.status(404).send("Producto no encontrado");
-    res.render("products/edit", { title: "Editar producto", product });
+    res.render("products/edit", { title: "Editar producto", product, colors, categories });
   },
 
-  edit: (req, res) => {
-const id = String(req.params.id);
-const index = products.findIndex(p => String(p.id) === id);
+  edit: async (req, res) => {
+    const updateData = {
+      id: req.params.id,
+      name: req.body.name,
+      description: req.body.description,
+      category_id: req.body.category,
+      color_id: req.body.colors,
+      price: req.body.price,
+    };
 
-    if (index !== -1) {
-      products[index] = { ...products[index], ...req.body, id };
-      if (req.file) {
-        products[index].image = req.file.filename;
-      }
-      fs.writeFileSync(productsFile, JSON.stringify(products, null, 2));
+    if (req.file) {
+      updateData.image = req.file.filename;
     }
+
+    await db.Product.update(updateData, {
+      where: { id: req.params.id },
+    });
+
     res.redirect("/products");
   },
-  delete: (req, res) => {
-    products = products.filter((p) => p.id != req.params.id);
-    fs.writeFileSync(productsFile, JSON.stringify(products, null, 2));
+
+  delete: async (req, res) => {
+    await db.Product.destroy({
+      where: { id: req.params.id },
+    });
     res.redirect("/products");
   },
 };
