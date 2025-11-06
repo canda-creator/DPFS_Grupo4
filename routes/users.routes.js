@@ -14,4 +14,7 @@ router.post('/logout', userController.logout);
 
 router.get('/profile', logged,userController.profile);
 
+router.get('/edit', logged, userController.edit);
+router.post('/processEdit', uploadUser.single('profile'), userController.processEdit);
+
 module.exports = router;

@@ -54,13 +54,43 @@ module.exports = {
     let newUser = {
       id: uuidv4(),
       name: req.body.name,
+      lastname: req.body.lastname,
       email: req.body.email,
-      profile: req.file?.filename || "default-profile.png",
+      profile: req.file?.filename || "default-profile.jpg",
       rol: "user",
       password: bcrypt.hashSync(req.body.password, 12),
     };
 
     await db.User.create(newUser);
     res.redirect("/users/login");
+  },
+
+  edit: async (req, res) => {
+    res.render("users/edit.ejs", { userLogged: req.session.userLogged });
+  },
+
+  processEdit: async (req, res) => {
+    let userId = req.session.userLogged.id;
+
+    let updatedUser = {
+      name: req.body.name,
+      lastname: req.body.lastname,
+      email: req.body.email,
+      profile: req.file?.filename || req.session.userLogged.profile,
+    };
+
+    if (req.body.password) {
+      updatedUser.password = bcrypt.hashSync(req.body.password, 12);
+    }
+
+    await db.User.update(updatedUser, {
+      where: { id: userId },
+    });
+
+    req.session.userLogged = { ...req.session.userLogged, ...updatedUser };
+
+    res.cookie("email", updatedUser.email, { maxAge: 1000 * 60 * 60 });
+
+    return res.redirect("/users/profile");
   },
 };

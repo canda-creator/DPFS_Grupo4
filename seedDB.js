@@ -11,6 +11,7 @@ async function seedDB() {
       {
         id: uuidv4(),
         name: "Admin",
+        lastname: "Admin",
         email: "admin@gmail.com",
         profile: "avatar-1757550618552.jpg",
         rol: "admin",
@@ -19,6 +20,7 @@ async function seedDB() {
       {
         id: uuidv4(),
         name: "NoAdmin",
+        lastname: "NoAdmin",
         email: "noadmin@gmail.com", 
         profile: "avatar-1757550786618.jpg",
         rol: "user",

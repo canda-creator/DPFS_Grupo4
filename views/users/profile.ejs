@@ -4,7 +4,8 @@
   <body>
     <%- include('../partials/header.ejs') %>
     <main>
-      Vista de perfil de <%= locals.userLogged.name %>
+      <button><a href="/users/edit">Editar perfil</a></button>
+      <h1>Perfil de <%= locals.userLogged.name %></h1>
       <img
         src="/media/users/<%= locals.userLogged.profile %>"
         alt="foto de perfil de <%= locals.userLogged.name %>"
