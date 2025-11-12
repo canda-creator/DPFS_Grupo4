@@ -21,9 +21,10 @@
             <span class="cantidad">0</span>
             <button class="cantidad-btn">+</button>
           </div>
-
-          <button class="add-to-cart">Agregar al carrito</button>
-
+          <form action="/cart/add" method="POST">
+            <input type="hidden" name="productID" value="<%= product.id %>"/>
+            <button class="add-to-cart">Agregar al carrito</button>
+          </form>
           <div class="product-description">
             <p><strong>Descripción:</strong> <%= product.description %></p>
           </div>

@@ -7,12 +7,15 @@ var logger = require('morgan');
 const session = require("express-session");
 const userLogged = require("./middlewares/auth/userLogged")
 
+const cors = require('cors');
+
 const db = require('./database/models')
 db.sequelize.sync(); // crea tablas si no existen
 
 var indexRouter = require('./routes/index.routes');
 var usersRouter = require('./routes/users.routes');
 var productsRouter = require('./routes/products.routes');
+var apiProductsRouter = require('./routes/api/products.routes');
 
 var app = express();
 
@@ -20,6 +23,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(cors())
 app.use(session({
   secret: "Nombre del sitio",
   resave: false, 
@@ -37,6 +41,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
+app.use('/api/products', apiProductsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -114,52 +114,32 @@
   <h2>Carrito de compras</h2>
   <button class="close-btn" onclick="toggleCart()">×</button>
 
-  <!-- Items del carrito -->
-  <div class="cart-item">
-    <div class="item-info">
-      <div class="item-title">Título del producto</div>
-      <div class="item-price">$10.000</div>
-    </div>
-    <div class="item-actions">
-      <button class="delete-item">Borrar</button>
-      <div class="cantidad-control">
-        <button class="cantidad-btn">-</button>
-        <span class="cantidad">1</span>
-        <button class="cantidad-btn">+</button>
+  <% 
+  let cart = [{
+    name: "Producto de ejemplo",
+    price: 15000,
+    amount: 2
+  }];
+  
+  cart.forEach(product => { %>
+  <!-- Item del carrito -->
+    <div class="cart-item">
+      <div class="item-info">
+        <div class="item-title"><%= product.name %></div>
+        <div class="item-price">$<%= product.price %></div>
+      </div>
+      <div class="item-actions">
+        <button class="delete-item" >Borrar</button>
+        <div class="cantidad-control">
+          <button class="cantidad-btn">-</button>
+          <span class="cantidad"><%= product.amount %></span>
+          <button class="cantidad-btn">+</button>
+        </div>
       </div>
     </div>
-  </div>
+  <% }); %>
 
-  <div class="cart-item">
-    <div class="item-info">
-      <div class="item-title">Título del producto</div>
-      <div class="item-price">$10.000</div>
-    </div>
-    <div class="item-actions">
-      <button class="delete-item">Borrar</button>
-      <div class="cantidad-control">
-        <button class="cantidad-btn">-</button>
-        <span class="cantidad">1</span>
-        <button class="cantidad-btn">+</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="cart-item">
-    <div class="item-info">
-      <div class="item-title">Título del producto</div>
-      <div class="item-price">$10.000</div>
-    </div>
-    <div class="item-actions">
-      <button class="delete-item">Borrar</button>
-      <div class="cantidad-control">
-        <button class="cantidad-btn">-</button>
-        <span class="cantidad">1</span>
-        <button class="cantidad-btn">+</button>
-      </div>
-    </div>
-  </div>
-
+  <!-- Total y botón de compra -->
   <div class="cart-total">Total: $30.000</div>
   <button class="comprar-btn">Iniciar Compra</button>
 </div>
