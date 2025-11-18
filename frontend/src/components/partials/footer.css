@@ -1,0 +1,44 @@
+footer{
+    background-color: #fee9ee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 20px; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer ul{
+    display: flex;
+    font-size: 1.8rem;
+    gap: 15px;
+    justify-content: center;
+    padding: 0;
+}
+
+footer ul li {
+    display: flex;          
+}
+
+.link-footer{
+    font-size: 15px;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 600;
+}
+
+.footer-email{
+    font-family: "Comfortaa", sans-serif;
+    font-size: 14px;
+    color: #555;
+}
+
+.email{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.467);
+}
+
+.fa-brands{
+    font-size: 24px;
+}
