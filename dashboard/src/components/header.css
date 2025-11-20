@@ -1,0 +1,23 @@
+header {
+  padding: 20px 0px;
+  height: 70px;
+}
+
+ul {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.5s;
+}
+
+.active {
+  font-weight: bold;
+  color: #007bff;
+}

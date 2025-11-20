@@ -1,19 +1,22 @@
+import { NavLink } from "react-router-dom";
+import "./header.css";
+
 export default function Header() {
   return (
     <header>
       <nav>
-        <ul>
+        <ul className="d-flex justify-content-center gap-3">
           <li>
-            <a href="/">Inicio</a>
+            <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Inicio</NavLink>
           </li>
           <li>
-            <a href="/usuarios">Usuarios</a>
+            <NavLink to="/usuarios" className={({ isActive }) => isActive ? "active" : ""}>Usuarios</NavLink>
           </li>
           <li>
-            <a href="/productos">Productos</a>
+            <NavLink to="/productos" className={({ isActive }) => isActive ? "active" : ""}>Productos</NavLink>
           </li>
         </ul>
       </nav>
     </header>
   );
-};
+}

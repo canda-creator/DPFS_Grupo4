@@ -3,6 +3,7 @@ import Header from "./components/header";
 import Inicio from "./pages/inicio";
 import Users from "./pages/users";
 import Products from "./pages/products";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -29,9 +30,15 @@ function App() {
   return (
     <>
       <Header />
-      <Inicio products={products} users={users} />
-      <Users users={users} />
-      <Products products={products} />
+        <Routes>
+          <Route
+            path="/"
+            element={<Inicio products={products} users={users} />}
+          />
+          <Route path="/usuarios" element={<Users users={users} />} />
+          <Route path="/productos" element={<Products products={products} />} />
+          <Route path="/*" element={<Navigate to="/" />} />
+        </Routes>
     </>
   );
 }
